@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Presentazione - Mattia Paventi</title>
+        <style>
+            /* Sfondo animato a gradiente */
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: "Arial", sans-serif;
+                background: linear-gradient(
+                    -45deg,
+                    #ff6b6b,
+                    #fbc531,
+                    #4cd137,
+                    #00a8ff
+                );
+                background-size: 400% 400%;
+                animation: gradientBG 15s ease infinite;
+            }
+            @keyframes gradientBG {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+
+            /* Contenitore con fade-in */
+            .container {
+                max-width: 900px;
+                margin: 50px auto;
+                background: rgba(255, 255, 255, 0.95);
+                border-radius: 15px;
+                padding: 30px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                animation: fadeInUp 1s ease-out;
+            }
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Animazione "floating" per l'immagine */
+            .profile-img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 5px solid #fff;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                animation: float 3s ease-in-out infinite;
+            }
+            @keyframes float {
+                0% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-10px);
+                }
+                100% {
+                    transform: translateY(0);
+                }
+            }
+
+            h1 {
+                font-size: 2.8em;
+                margin: 20px 0 10px;
+                color: #333;
+            }
+            h2 {
+                font-size: 1.8em;
+                margin-bottom: 15px;
+                color: #555;
+            }
+            p {
+                font-size: 1.1em;
+                margin-bottom: 20px;
+                color: #444;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+            li {
+                margin: 10px 0;
+                color: #444;
+            }
+            a {
+                color: #2575fc;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s;
+            }
+            a:hover {
+                color: #6a11cb;
+            }
+            .button {
+                display: inline-block;
+                margin-top: 20px;
+                padding: 12px 25px;
+                background-color: #2575fc;
+                color: #fff;
+                border: none;
+                border-radius: 50px;
+                font-size: 1.2em;
+                text-decoration: none;
+                transition:
+                    background-color 0.3s,
+                    transform 0.3s;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            }
+            .button:hover {
+                background-color: #6a11cb;
+                transform: translateY(-3px);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="tuafoto.jpg" alt="La mia foto" class="profile-img" />
+            <h1>Mattia Paventi</h1>
+            <h2>📚 Chi sono</h2>
+            <p>
+                Sono uno studente presso ITS corso Cyber Security. Appassionato
+                di tecnologia e reti informatiche.
+            </p>
+            <h2>Progetto Cisco Packet Tracer</h2>
+            <p>
+                Nel mio progetto esploro reti, sicurezza e simulazioni. Clicca
+                qui sotto per maggiori dettagli!
+            </p>
+            <a href="progetto.html" class="button">Scopri il mio progetto</a>
+            <h2>📌 Contatti</h2>
+            <ul>
+                <li>
+                    📧 Email: <a href="mailto:tua@email.com">tua@email.com</a>
+                </li>
+                <li>
+                    💼 LinkedIn: <a href="[link-linkedin]">Profilo LinkedIn</a>
+                </li>
+                <li>🐱 GitHub: <a href="[link-github]">Profilo GitHub</a></li>
+            </ul>
+        </div>
+    </body>
+</html>
