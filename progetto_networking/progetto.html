@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Progetto Cisco Packet Tracer</title>
+        <title>Progetto Cisco Packet Tracer - Rete Ufficio Aziendale</title>
         <style>
             /* Sfondo animato a gradiente */
             body {
@@ -127,32 +127,98 @@
     </head>
     <body>
         <div class="container">
-            <h1>Progetto Cisco Packet Tracer</h1>
+            <h1>Progetto Cisco Packet Tracer - Rete Ufficio Aziendale</h1>
             <p>
-                Questo progetto dimostra le competenze acquisite nel corso di
-                Cyber Security, sfruttando Cisco Packet Tracer per simulazioni
-                di rete avanzate e configurazioni di sicurezza.
+                Questo progetto dimostra la configurazione di una rete aziendale
+                avanzata utilizzando Cisco Packet Tracer. La simulazione include
+                la segmentazione della rete in VLAN, il routing inter-VLAN,
+                l'accesso a Internet e la ridondanza con STP (Spanning Tree
+                Protocol).
             </p>
-            <h2>📂 Dettagli del progetto</h2>
+
+            <h2>📂 Dettagli del Progetto</h2>
             <ul>
-                <li>Configurazione di VLAN per segmentazione della rete</li>
-                <li>Firewall personalizzati per protezione avanzata</li>
-                <li>Simulazioni di attacchi e contromisure</li>
+                <li>
+                    <strong>Segmentazione della rete in VLAN:</strong>
+                    <ul>
+                        <li>VLAN 10: Amministrazione (192.168.10.0/24)</li>
+                        <li>VLAN 20: Dipendenti (192.168.20.0/24)</li>
+                        <li>VLAN 30: Ospiti (192.168.30.0/24)</li>
+                        <li>VLAN 100: DMZ (10.0.100.0/24)</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Routing inter-VLAN:</strong>
+                    Configurato utilizzando switch Layer 3 (Core-SW1 e Core-SW2)
+                    per il routing tra VLAN senza l'uso di un router dedicato.
+                </li>
+
+                <li>
+                    <strong>Accesso a Internet:</strong>
+                    Configurato tramite un router (Cisco 4331) e un dispositivo
+                    PT-Cloud che simula un ISP. Il NAT (Network Address
+                    Translation) è stato configurato per permettere ai
+                    dispositivi interni di accedere a Internet.
+                </li>
+                <li>
+                    <strong>Ridondanza con STP:</strong>
+                    Implementato Spanning Tree Protocol (STP) per evitare loop
+                    di rete e garantire la ridondanza dei collegamenti.
+                </li>
+                <li>
+                    <strong>Servizi di rete:</strong>
+                    <ul>
+                        <li>Server Web/DNS nella DMZ (10.0.100.10).</li>
+                        <li>DHCP per l'assegnazione automatica degli IP.</li>
+                        <li>Accesso wireless tramite WLC e Access Point.</li>
+                    </ul>
+                </li>
             </ul>
+
+            <h2>🛠️ Configurazioni Principali</h2>
+            <ul>
+                <li>
+                    <strong>Switch Layer 3:</strong>
+                    Configurati come router inter-VLAN con comandi come
+                    <code>ip routing</code> e <code>interface vlan</code>.
+                </li>
+
+                <li>
+                    <strong>Router:</strong>
+                    Configurato con una default route verso l'ISP e NAT per
+                    l'accesso a Internet.
+                </li>
+                <li>
+                    <strong>Server:</strong>
+                    Configurato come server Web e DNS nella DMZ per servizi
+                    pubblici.
+                </li>
+            </ul>
+
+            <h2>🔍 Test e Verifiche</h2>
+            <ul>
+                <li>
+                    <strong>Ping tra VLAN:</strong>
+                    Verificato il corretto funzionamento del routing inter-VLAN
+                    con ping tra dispositivi di VLAN diverse.
+                </li>
+                <li>
+                    <strong>Accesso a Internet:</strong>
+                    Testato l'accesso a Internet da dispositivi interni tramite
+                    <code>ping 8.8.8.8</code>.
+                </li>
+            </ul>
+
             <div class="resources">
                 <h2>🖼️ Screenshot</h2>
-                <img
-                    src="screenshot-progetto.jpg"
-                    alt="Screenshot del progetto"
-                />
+                <img src="screenshot.png" alt="Screenshot del progetto" />
                 <h2>🔗 Risorse</h2>
-                <a href="documentazione.pdf" download="documentazione.pdf"
-                    >Scarica documentazione</a
-                >
+
                 <a href="progetto.pkt" download="progetto-cisco.pkt"
                     >Scarica file .pkt</a
                 >
             </div>
+
             <p class="back-link">
                 <a href="index.html">⬅️ Torna alla pagina principale</a>
             </p>
