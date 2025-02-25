@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Progetto Cisco Packet Tracer</title>
+        <style>
+            /* Sfondo animato a gradiente */
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: "Arial", sans-serif;
+                background: linear-gradient(
+                    -45deg,
+                    #00a8ff,
+                    #9c88ff,
+                    #fbc531,
+                    #e84118
+                );
+                background-size: 400% 400%;
+                animation: gradientBG 15s ease infinite;
+            }
+            @keyframes gradientBG {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+
+            /* Contenitore con fade-in */
+            .container {
+                max-width: 900px;
+                margin: 50px auto;
+                background: rgba(255, 255, 255, 0.97);
+                border-radius: 15px;
+                padding: 30px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                color: #333;
+                animation: fadeInUp 1s ease-out;
+            }
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            h1 {
+                font-size: 2.8em;
+                margin: 20px 0;
+                text-align: center;
+                color: #333;
+            }
+            h2 {
+                font-size: 1.8em;
+                margin-bottom: 15px;
+                color: #555;
+            }
+            p {
+                font-size: 1.1em;
+                margin-bottom: 20px;
+                text-align: justify;
+                line-height: 1.5;
+                color: #444;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+            ul li {
+                margin: 10px 0;
+                font-size: 1.1em;
+                color: #444;
+            }
+            .resources img {
+                max-width: 100%;
+                border-radius: 10px;
+                margin: 20px 0;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s;
+            }
+            .resources img:hover {
+                transform: scale(1.05);
+            }
+            .resources a {
+                display: inline-block;
+                margin: 15px 10px;
+                padding: 12px 20px;
+                background-color: #2575fc;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 50px;
+                transition:
+                    background-color 0.3s,
+                    transform 0.3s;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            }
+            .resources a:hover {
+                background-color: #6a11cb;
+                transform: translateY(-3px);
+            }
+            .back-link {
+                display: block;
+                margin-top: 30px;
+                text-align: center;
+                font-size: 1.2em;
+            }
+            .back-link a {
+                color: #2575fc;
+                font-weight: bold;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+            .back-link a:hover {
+                color: #6a11cb;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Progetto Cisco Packet Tracer</h1>
+            <p>
+                Questo progetto dimostra le competenze acquisite nel corso di
+                Cyber Security, sfruttando Cisco Packet Tracer per simulazioni
+                di rete avanzate e configurazioni di sicurezza.
+            </p>
+            <h2>📂 Dettagli del progetto</h2>
+            <ul>
+                <li>Configurazione di VLAN per segmentazione della rete</li>
+                <li>Firewall personalizzati per protezione avanzata</li>
+                <li>Simulazioni di attacchi e contromisure</li>
+            </ul>
+            <div class="resources">
+                <h2>🖼️ Screenshot</h2>
+                <img
+                    src="screenshot-progetto.jpg"
+                    alt="Screenshot del progetto"
+                />
+                <h2>🔗 Risorse</h2>
+                <a href="documentazione.pdf" download="documentazione.pdf"
+                    >Scarica documentazione</a
+                >
+                <a href="progetto.pkt" download="progetto-cisco.pkt"
+                    >Scarica file .pkt</a
+                >
+            </div>
+            <p class="back-link">
+                <a href="index.html">⬅️ Torna alla pagina principale</a>
+            </p>
+        </div>
+    </body>
+</html>
